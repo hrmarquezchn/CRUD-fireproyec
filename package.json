@@ -17,7 +17,8 @@
     "react-router": "^6.21.3",
     "start": "^5.1.0",
     "sweetalert2": "^11.10.4",
-    "sweetalert2-react-content": "^5.0.7"
+    "sweetalert2-react-content": "^5.0.7",
+    "vitae": "^0.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
