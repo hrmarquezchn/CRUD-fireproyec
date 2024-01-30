@@ -32,9 +32,29 @@ const deleteProduct = async (id) => {
   getProducts()
 }
 
-
 //funsion para confirmacion de SwitAlert
+ const confirmDelete = (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Deleted!",
+        text: "Your file has been deleted.",
+        icon: "success"
+      });
+    }
+  });
 
+
+
+ }
 
 //Usar useEffect
 useEffect(() => {
@@ -68,7 +88,7 @@ useEffect(() => {
 
               <td>
                   <link to={`/edit/${product.id}`} className="btn btn-light"><i className="fa-solid fa-pecil"></i></link>
-                  <button onClick={ () =>{ deleteProduct(product.id) }} className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
+                  <button onClick={ () =>{ confirmDelete(product.id) }} className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
               </td>
              </tr> 
             )) }

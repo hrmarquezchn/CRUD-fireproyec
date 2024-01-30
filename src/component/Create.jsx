@@ -27,7 +27,7 @@ const Create = () => {
             <div className='mb-3'>
             <label className='form-label'>Description</label>
             <input 
-                value={descriprion}
+                value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 type="text"
                 className='form-control'
@@ -35,15 +35,15 @@ const Create = () => {
             </div>
 
             <div className='mb-3'>
-            <label className='form-label'>Description</label>
+            <label className='form-label'>Stock</label>
             <input 
-                value={descriprion}
-                onChange={(e) => setDescription(e.target.value)}
-                type="text"
+                value={stock}
+                onChange={(e) => setStock(e.target.value)}
+                type="number"
                 className='form-control'
             />
             </div>
-            <button></button>
+            <button type='submit' className='btn btn-primary'>Store</button>
           </form>
 
           </div>
